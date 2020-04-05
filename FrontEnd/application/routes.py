@@ -16,7 +16,8 @@ def about():
 #Render the about page
 @app.route('/value', methods=['GET', 'POST'])
 def value():
-	value = requests.post('https://shaybsapp.azurewebsites.net/api/centralserver?code=qgixZAslpaGvBpqTnMOp2cVBvct6UozfMCQRwuNHIKZhGXTY2utsag==')
+	value_json = requests.post('https://shaybsapp.azurewebsites.net/api/centralserver?code=qgixZAslpaGvBpqTnMOp2cVBvct6UozfMCQRwuNHIKZhGXTY2utsag==')
+    value = value_json.json()["Value"]
 	return render_template('value.html', title='Functions Application', value=value)
 
 
