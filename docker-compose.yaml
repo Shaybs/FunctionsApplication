@@ -6,6 +6,8 @@ services:
       replicas: 2
     container_name: frontend
     build: FrontEnd/
+    environment:
+    - SECRET_KEY=${SECRET_KEY}
 
   nginx:
     image: nginx:latest

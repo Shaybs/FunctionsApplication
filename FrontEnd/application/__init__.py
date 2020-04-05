@@ -7,6 +7,7 @@ import os
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 bootstrap = Bootstrap(app)
 bcrypt = Bcrypt(app)
 
