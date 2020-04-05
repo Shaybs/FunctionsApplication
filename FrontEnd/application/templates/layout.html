@@ -20,20 +20,9 @@
 			              <a class="navbar-brand topnav" href="{{ url_for('home') }}">Functions Application</a>
 			          </div>
 			          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-						  {% if current_user.is_authenticated %}
-				          <ul class="nav navbar-nav navbar-right">
-	                        	<li><a href="{{ url_for('home') }}">Home</a></li>
-	                        	<li><a href="{{ url_for('value') }}">Value</a></li>
-	                        	<li><a href="{{ url_for('about') }}">About</a></li>
-								<li><a><i class="fa fa-user"></i>  Hi, OG!</a></li>
-			              </ul>
-						  {% else %}
 						  <ul class="nav navbar-nav navbar-right">
 	                        	<li><a href="{{ url_for('home') }}">Home</a></li>
 	                        	<li><a href="{{ url_for('about') }}">About</a></li>
-	                      </ul>
-						  {% endif %}
 	                      </ul>
 			          </div>
 			        </div>
